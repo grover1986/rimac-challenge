@@ -1,0 +1,86 @@
+// ============================================
+// MIXINS PARA RESPONSIVE
+// ============================================
+// Son como "atajos" para no escribir código repetitivo
+
+// Uso: @include mobile { ...estilos... }
+@mixin mobile {
+  @media (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+// Uso: @include tablet { ...estilos... }
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+// Uso: @include desktop { ...estilos... }
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
+
+// ============================================
+// MIXINS PARA BEM
+// ============================================
+
+// Este mixin te ayuda a escribir BEM más fácil
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+// ============================================
+// MIXINS DE UTILIDAD
+// ============================================
+
+// Centrar con flexbox
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Centrar solo horizontalmente
+@mixin flex-center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+// Centrar solo verticalmente
+@mixin flex-center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+// Para truncar texto largo con "..."
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Para ocultar en mobile
+@mixin hide-mobile {
+  @include mobile {
+    display: none;
+  }
+}
+
+// Para ocultar en desktop
+@mixin hide-desktop {
+  @include desktop {
+    display: none;
+  }
+}

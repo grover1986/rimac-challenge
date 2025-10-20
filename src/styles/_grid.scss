@@ -1,0 +1,75 @@
+// ============================================
+// GRID SYSTEM (Sistema de cuadrícula)
+// ============================================
+// El Grid System es como una "rejilla invisible" que organiza el contenido
+
+// Contenedor principal (max-width y centrado)
+.container {
+  width: 100%;
+  max-width: 1440px;  // Ancho máximo en pantallas grandes
+  margin: 0 auto;     // Centrado horizontal
+  padding: 0 $spacing-md;
+
+  @include desktop {
+    padding: 0 $spacing-xxxl;
+  }
+}
+
+// Contenedor más pequeño para formularios
+.container--small {
+  max-width: 1136px;
+}
+
+// ============================================
+// SISTEMA DE FILAS Y COLUMNAS
+// ============================================
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 (-$spacing-md);
+
+  @include desktop {
+    margin: 0 (-$spacing-lg);
+  }
+}
+
+// Columnas (como bloques que ocupan espacio)
+.col {
+  padding: 0 $spacing-md;
+  
+  @include desktop {
+    padding: 0 $spacing-lg;
+  }
+}
+
+// Columnas con tamaños específicos
+// col-12 = ocupa todo el ancho (100%)
+// col-6 = ocupa la mitad (50%)
+// col-4 = ocupa un tercio (33.33%)
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    flex: 0 0 percentage($i / 12);
+    max-width: percentage($i / 12);
+  }
+}
+
+// Columnas responsive
+// En mobile todas las columnas ocupan 100%
+@include mobile {
+  [class*="col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+// En desktop puedes especificar tamaños
+@include desktop {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      flex: 0 0 percentage($i / 12);
+      max-width: percentage($i / 12);
+    }
+  }
+}

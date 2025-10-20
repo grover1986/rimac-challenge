@@ -1,0 +1,91 @@
+// ============================================
+// VARIABLES DE COLORES
+// ============================================
+
+// Colores principales
+$color-primary: #FF1C44;	// Rojo/Rosa de botones
+$color-secondary: #00F4E2;	// Turquesa
+$color-tertiary: #7981FF;	// Azul/morado (stepper)
+
+// Colores de fondo
+$color-bg-light: #F7F8FC; // Fondo claro
+$color-bg-white: #FFFFFF; // Blanco puro
+$color-bg-dark: #03050F;  // Azul muy oscuro (footer)
+
+// Colores de texto
+$color-text-primary: #141938;	// Texto principal
+$color-text-secondary: #7981B2; // Texto secundario
+$color-text-light: #FFFFFF;	// Texto blanco
+
+// Colores de borde
+$color-border: #DFE0E5;	// Bordes sutiles
+$color-border-dark: #141938;	// Borde oscuro (cuando seleccionado)
+
+// Colores de estado
+$color-success: #389E0D;	// Verde (check)
+$color-error: #FF1C44;	// Rojo (errores)
+
+
+// ============================================
+// TIPOGRAFÍA
+// ============================================
+
+// Fuentes del proyecto
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Lato', sans-serif;
+
+// Tamaños de fuente
+$font-size-xs: 12px;
+$font-size-sm: 14px;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-xl: 24px;
+$font-size-xxl: 32px;
+$font-size-xxxl: 40px;
+
+// Peso de fuente
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+
+// ============================================
+// ESPACIADOS
+// ============================================
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px;
+$spacing-xxxl: 64px;
+
+
+// ============================================
+// BREAKPOINTS (Responsive)
+// ============================================
+
+// Los "puntos de quiebre" donde el diseño cambia
+$breakpoint-mobile: 320px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-large: 1440px;
+
+
+// ============================================
+// OTROS
+// ============================================
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 16px;
+$border-radius-xl: 24px;
+$border-radius-full: 50%;
+
+$box-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+$box-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+$box-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.16);
+
+$transition-fast: 0.2s ease;
+$transition-base: 0.3s ease;
+$transition-slow: 0.5s ease;
