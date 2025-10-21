@@ -1,0 +1,21 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+// ============================================
+// MAIN LAYOUT
+// ============================================
+.main-layout {
+  min-height: 100vh; // Ocupa al menos toda la altura de la pantalla
+  display: flex;
+  flex-direction: column;
+
+  // El contenido principal
+  &__content {
+    flex: 1; // Esto hace que el contenido "empuje" el footer hacia abajo
+    padding: $spacing-xl 0;
+
+    @include mobile {
+      padding: $spacing-lg 0;
+    }
+  }
+}

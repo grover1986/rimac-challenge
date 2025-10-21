@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Logo en blanco */}
           <div className="footer__logo">
             <img 
-              src="/logo-rimac-white.svg" 
+              src='/logo-rimac-white.png' 
               alt="RIMAC Seguros" 
               className="footer__logo-img"
             />
