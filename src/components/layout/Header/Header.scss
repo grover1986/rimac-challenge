@@ -1,0 +1,71 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+// ============================================
+// HEADER
+// ============================================
+// BEM: Block = header
+.header {
+	background-color: $color-bg-white;
+  padding: $spacing-md 0;
+  box-shadow: $box-shadow-sm;
+  position: sticky;
+  top: 0;
+  z-index: 100; // Para que esté encima de otros elementos
+
+  @include desktop {
+    padding: $spacing-lg 0;
+  }
+
+  // BEM: Element = header__content
+  &__content {
+    @include flex-center-vertical; // Usa el mixin que creamos
+    justify-content: space-between;
+  }
+
+  // BEM: Element = header__logo
+  &__logo {
+    &-img {
+      height: 36px;
+      width: auto;
+
+      @include desktop {
+        height: 42px;
+      }
+    }
+  }
+
+  // BEM: Element = header__contact
+  &__contact {
+    @include flex-center-vertical;
+    gap: $spacing-sm;
+
+    &-text {
+      font-size: $font-size-sm;
+      color: $color-text-secondary;
+      font-weight: $font-weight-medium;
+    }
+
+    &-phone {
+      @include flex-center-vertical;
+      gap: $spacing-xs;
+      font-size: $font-size-base;
+      font-weight: $font-weight-bold;
+      color: $color-text-primary;
+      text-decoration: none;
+      transition: color $transition-fast;
+
+      &:hover {
+        color: $color-primary;
+      }
+
+      @include mobile {
+        font-size: $font-size-sm;
+      }
+    }
+
+    &-icon {
+      font-size: 18px;
+    }
+  }
+}
